@@ -1,0 +1,63 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="col-sm-2 side-1">
+            <div class="side-content">
+                <div class="side-content-wrapper">
+                    <div class="profile-stats">
+                        <div class="stats">
+                            <span class="score">299</span>
+                            <span class="lvl">MASTER</span>
+                        </div>
+                        <img class="profile-pic" src="images/default-no-profile-pic.png" ng-src="{{user.profilePic}}"
+                             ui-sref="root.home">
+                    </div>
+                    <div class="filler">
+                        <div class="fill">
+
+                        </div>
+                    </div>
+                    <div class="side-contrib-btn">
+                        CONTRIBUTE
+                    </div>
+                    <div class="side-menu-btns">
+                        <div class="main-link" ui-sref="root.userProfile" ui-sref-active="active">
+                            Profile
+                        </div>
+                        <div class="main-link" ui-sref="root.projects" ui-sref-active="active">
+                            My Projects
+                        </div>
+                        <div class="main-link" ui-sref-active="active">
+                            Stats
+                        </div>
+                        <div class="main-link" ui-sref-active="active">
+                            Map
+                        </div>
+                        <div class="main-link" ui-sref-active="active">
+                            My Groups
+                        </div>
+                        <div class="main-link" ng-click="logout()">
+                            Sign Out
+                        </div>
+                    </div>
+                </div>
+
+                <div class="links-wrapper">
+                    <ul class="link-ul">
+                        <li>ABOUT US</li>
+                        <li>SUPPORTED BY</li>
+                        <li>CONTACT US</li>
+                        <li>ARCHIVE</li>
+                        <li>FAQ</li>
+                        <li>PUBLICATIONS</li>
+                        <li>POLICIES</li>
+                        <li>TERMS AND CONDITIONS</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 view hidden-xs" ui-view>
+
+        </div>
+    </div>
+</div>

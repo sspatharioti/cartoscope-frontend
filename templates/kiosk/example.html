@@ -1,0 +1,54 @@
+<div class="content" ng-controller="exampleController">
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+            <h4 class="title">Tutorial</h4>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <img id="tut_image" class="img-responsive img-border" src="{{tutorial[counter].image}}">
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-2 col-sm-1"></div>
+        <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+            <h3 id="tut_question">{{question}}</h3>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-md-2"></div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <button class="btn-lg tut_answer" placeholder="Option" ng-repeat="option in tutorial[counter].options"
+                    style="background-color: {{option.color}};border-color: {{option.color}};
+                   border:2px solid {{option.color}}; padding: 2px;" ng-click="show_Correct_Options()"
+            >{{option.name}}</button>
+        </div>
+        <div class="col-lg-2 col-md-2"></div>
+    </div>
+
+    <div id="correct-note" class="row" style="visibility:hidden">
+        <div class="col-lg-3 col-md-1 col-sm-2"></div>
+        <div class="col-lg-6 col-md-10 col-sm-8 col-xs-12">
+            <h4 id="tut_correct_ans">Τhe answer here is <span id="tut_span" style="color: {{tutorial[counter].color}}">{{tutorial[counter].answer}}</span>.</h4>
+            <h4 id="tut_text">{{tutorial[counter].text}}</h4>
+        </div>
+        <div class="col-lg-3 col-md-1 col-sm-2"></div>
+    </div>
+
+    <div id="tut_next" class="agree-btn-row" style="visibility:hidden">
+        <button class="consent-button" ng-click="next_button()" >Next</button>
+    </div>
+
+    <div id="tut_start" class="agree-btn-row" style="visibility:hidden">
+        <button class="consent-button" ng-click="start()">Start</button>
+    </div>
+</div>

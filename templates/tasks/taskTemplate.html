@@ -1,0 +1,62 @@
+<!--<nav class="navbar navbar-inverse">-->
+    <!--<div class="container">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="navbar-header visible-xs">&ndash;&gt;-->
+            <!--&lt;!&ndash;<ul class="nav navbar-nav navbar-right">&ndash;&gt;-->
+                <!--&lt;!&ndash;<li ng-switch="userType">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button ng-switch-when="mTurk" class="btn btn-default navbar-btn header-btn" ng-click="skipToSurvey()" style="background-color:#9cdc1f;">Go To Survey</button>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button ng-switch-when="kiosk" class="btn btn-default navbar-btn header-btn" ng-click="handleEnd()" style="background-color:#9cdc1f;">I'm Done</button>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button ng-switch-default class="btn btn-default navbar-btn header-btn" ng-click="handleFinish()" style="background-color:#9cdc1f;">Back to Profile</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse hidden-xs">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li ng-switch="userType">-->
+                    <!--<button ng-switch-when="mTurk" class="btn btn-default navbar-btn" ng-click="skipToSurvey()" style="background-color:#9cdc1f;">Go To Survey</button>-->
+                    <!--<button ng-switch-when="kiosk" class="btn btn-default navbar-btn" ng-click="handleEnd()" style="background-color:#9cdc1f;">I'm Done</button>-->
+                    <!--<button ng-switch-default class="btn btn-default navbar-btn" ng-click="handleFinish()" style="background-color:#9cdc1f;">Back to Profile</button>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+<div class="task-body">
+    <div class="row" style="margin-bottom: 20px;">
+        <div ng-switch="userType" style="text-align: center">
+            <button ng-switch-when="mTurk" class="btn btn-default btn-primary done-button" ng-click="skipToSurvey()">GO TO SURVEY</button>
+            <button ng-switch-when="kiosk" class="btn btn-default btn-primary done-button" ng-click="handleEnd()">I'M DONE</button>
+            <button ng-switch-default class="btn btn-default btn-primary done-button" ng-click="handleFinish()">BACK TO PROFILE</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 img-title contribution-details" ng-switch="userType">
+                <h6 ng-switch-when="kiosk" class="img-title">Images Contributed So far : {{data.progress - 1 }}</h6>
+                <h6 ng-switch-when="mTurk" class="img-title">IMAGE {{data.progress <= data.size ? data.progress:data.size }} OUT OF {{data.size}}</h6>
+                <h6 ng-switch-default class="img-title">IMAGE {{data.progress <= data.size ? data.progress:data.size }} OUT OF {{data.size}}</h6>
+
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center;">
+        <div class="col-sm-12"><img class="img-responsive img-task" ng-src="{{getNextTask()}}"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3"></div>
+        <div class="col-lg-6 col-md-6 img-title"><h4>{{data.template.question}}</h4></div>
+        <div class="col-lg-3 col-md-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-lg-12 col-md-6 col-sm-12 answers">
+            <button ng-repeat="option in data.template.options" ng-class="getColourClass(option.color)"
+                    ng-click="submit($index)" ng-disabled="finished" class="options"> {{option.text}}
+            </button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

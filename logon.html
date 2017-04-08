@@ -1,0 +1,173 @@
+<div class="container-fluid h-100" ng-controller="loginController">
+    <div class="row h-100">
+        <div class="col-sm-2 side-1">
+            <div class="login-content">
+                <div class="login-buttons-wrapper">
+                    <div class="login-top-panel">
+                        <span class="log-tit">
+                            LOGIN
+                        </span>
+                        <p class="log-msg">
+                            To keep track of your progress through the website, please login below:
+                        </p>
+                        <input class="inp" placeholder="USERNAME" ng-model="loginData.email">
+                        <input class="inp" placeholder="PASSWORD" type="password" ng-model="loginData.password"
+                               ng-enter="login()">
+                        <div class="rem-row">
+                            <label class="rem-me"><input type="checkbox" ng-model="loginData.rememberMe"
+                                                         ng-init="loginData.rememberMe = false"> REMEMBER ME </label>
+                            <span></span>
+                            <label class="fgt-pass"> FORGOT PASSWORD </label>
+                        </div>
+                        <div style="clear: both"></div>
+
+                        <button class="login-btn" ng-click="login()">
+                            LOG IN
+                        </button>
+
+                    </div>
+
+                    <h4 class="reg-msg">
+                        NOT YET REGISTERED?
+                    </h4>
+
+                    <div class="reg-btn-holder">
+                        <button class="register-btn" data-toggle="modal" data-target="#registerModal">
+                            REGISTER
+                        </button>
+                    </div>
+                </div>
+
+                <div class="links-wrapper">
+                    <ul class="link-ul">
+                        <li>ABOUT US</li>
+                        <li>SUPPORTED BY</li>
+                        <li>CONTACT US</li>
+                        <li>ARCHIVE</li>
+                        <li>FAQ</li>
+                        <li>PUBLICATIONS</li>
+                        <li>POLICIES</li>
+                        <li>TERMS AND CONDITIONS</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 center-1 hidden-sm hidden-xs">
+            <div class="content-links-wrapper">
+                    <span>
+                          PROJECTS
+                    </span>
+                <span class="circ-sep"></span>
+                <span>
+                        GROUPS
+                    </span>
+                <span class="circ-sep"></span>
+                <span>
+                        NEWS
+                    </span>
+                <span class="circ-sep"></span>
+                <span>
+                        FORUM
+                    </span>
+            </div>
+            <div class="center-content">
+                <h1 class="welcomemessage">WELCOME TO CARTOSCO.PE</h1>
+                <div class="welcometext">A platform where you can make a difference in the world
+                    <br>by accomplishing small but important tasks
+                    <br>that will help rescue team scan affected areas faster than ever!
+                </div>
+
+                <button class="contrib-btn" ng-click="changePath()">
+                    Start Contributing
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="width: 750px;">
+        <div class="modal-content">
+            <div class="modal-body register-modal-body">
+                <div class="modal-kill-btn">
+                    <button data-dismiss="modal">X</button>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <label class="reg-lbl">
+                                Username*
+                                <input class="reg-inp" ng-model='userRegData.username'>
+                            </label>
+
+                            <label class="reg-lbl">
+                                Password *
+                                <input class="reg-inp" type="password" ng-model='userRegData.password'>
+                            </label>
+                            <label class="reg-lbl">
+                                Confirm Password *
+                                <input class="reg-inp" type="password" ng-model='userRegData.repPassword'>
+                            </label>
+
+                            <label class="reg-lbl">
+                                Email *
+                                <input class="reg-inp" ng-model='userRegData.email'>
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>
+                                Profile Picture
+                                <input type="file" file-model="userRegData.profilePic" accept="image/*">
+
+                            </label>
+                            <canvas id="imageCanvas" style="height: 180px;width: 180px">
+
+                            </canvas>
+                        </div>
+                    </div>
+
+
+                    <label class="reg-lbl">
+                        Terms and conditions of use
+                        <textarea class="reg-inp" readonly style="resize: none;height: 200px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas nisl id arcu fermentum, vel porttitor diam blandit. Sed auctor augue id ex consequat molestie. Donec pharetra ante ipsum, vitae ornare tellus dignissim nec. Vivamus in sapien a urna accumsan dignissim. Vivamus eget erat tincidunt, dictum elit vel, aliquam justo. Donec condimentum venenatis velit, vitae viverra urna sagittis id. Nullam mi justo, commodo congue finibus nec, aliquet non lectus.
+
+Quisque posuere, mi at hendrerit congue, lorem nulla fringilla massa, id dictum magna enim at sem. Cras vulputate nec erat hendrerit vestibulum. Nullam euismod diam sed velit rhoncus, eu vulputate urna tincidunt. Nam lorem urna, lacinia a elementum eu, sagittis pharetra lacus. Cras consequat est sed porttitor pulvinar. Nulla elit metus, mollis ut lorem vitae, dapibus iaculis felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed luctus nisi.
+
+Donec iaculis quam ut pellentesque semper. Quisque malesuada finibus dictum. Sed tempus lectus nisi, ut pellentesque metus varius vitae. Sed tempus viverra nunc, ac varius nulla. Duis sit amet felis sed tellus vestibulum commodo. Vivamus a dolor a arcu venenatis efficitur. Donec auctor interdum mauris a efficitur. Etiam accumsan eros vitae nulla viverra efficitur. Ut nisl risus, ornare nec erat vitae, porta interdum libero. Proin ultrices non ex a dignissim. Sed nisl risus, eleifend vitae libero at, gravida pretium lectus. Praesent pretium purus nec finibus egestas. Cras tincidunt vel turpis eget facilisis. Donec sit amet rutrum tellus. Pellentesque arcu urna, sodales vitae vehicula a, faucibus id nulla. Pellentesque pharetra consectetur libero ac auctor.
+
+Duis consectetur mauris non lacinia sollicitudin. Cras sed quam in augue eleifend viverra non ut mi. Donec eget tellus ut tellus aliquam pretium. Cras pretium arcu et lorem mattis, sed accumsan leo ultrices. Morbi non est in elit lacinia rutrum. Quisque volutpat, risus a tristique venenatis, justo ante vulputate arcu, vel semper nunc felis at magna. Morbi imperdiet tristique urna, eu semper massa tempor id. Maecenas at augue odio. Aenean aliquam tellus et posuere bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas ut dolor id magna bibendum porta. Ut sit amet velit eget sapien interdum ultricies. Sed venenatis nunc quis nisi auctor tincidunt nec id ipsum. Etiam a dui tellus. In sed augue rutrum, fermentum sem a, vehicula metus.
+
+Mauris purus justo, maximus sit amet ultricies in, luctus vitae nunc. Suspendisse dignissim, lacus a sollicitudin cursus, purus odio blandit leo, vitae finibus nisl dui sed justo. Maecenas elementum aliquet leo malesuada consequat. Donec facilisis quis erat a lacinia. Etiam scelerisque, diam quis egestas consectetur, augue purus lacinia justo, at sagittis sapien erat ut eros. Etiam tristique eleifend diam, eu rhoncus tellus finibus at. Maecenas sit amet nibh metus. Pellentesque rutrum blandit metus, ac congue quam sagittis a. Proin feugiat odio eu tellus vehicula, vel mollis metus pulvinar. Nullam maximus facilisis justo vitae venenatis. Sed suscipit ultrices velit sit amet condimentum. Duis eget risus sit amet turpis luctus ornare eu in augue. Curabitur facilisis consectetur urna, sed commodo lorem rhoncus quis.
+
+                            </textarea>
+                    </label>
+
+                    <label class="reg-lbl"
+                           style="margin-top: 20px; font-weight: 500;font-size: 12px; margin-bottom: 0px; ">
+                        <input type="checkbox" ng-model="userRegData.agreePrivacyPolicy"
+                               ng-init="userRegData.agreePrivacyPolicy = false"> You agree to our privacy policy
+                    </label>
+
+                    <label class="reg-lbl" style="font-weight: 500;font-size: 12px; margin-bottom: 0px; ">
+                        <input type="checkbox" ng-model="userRegData.agreeMail" ng-init="userRegData.agreeMail = false">
+                        It's okay to send me a mail once in a while
+                    </label>
+
+                    <label class="reg-lbl" style="font-weight: 500;font-size: 12px; margin-bottom: 0px; ">
+                        <input type="checkbox" ng-model="userRegData.agreeNewProject"
+                               ng-init="userRegData.agreeNewProject = false"> I'd like to help test new projects, and be
+                        emailed once they're available
+                    </label>
+
+                    <button class="modal-register-button" ng-click="register()">
+                        REGISTER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

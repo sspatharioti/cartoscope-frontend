@@ -1,0 +1,133 @@
+body {
+    /*background-color: #26272a;*/
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
+    background-image: url('../images/background_dktp.png');
+}
+body.mask {
+    overflow: hidden;
+}
+body.mask .ui-mask-modal {
+    display: block;
+    background-color: white;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    z-index: 2147483647;
+}
+.survey-bttn{
+    margin-top: 3%;
+    text-align: center;
+}
+.header-btn{
+    margin-left:65%;
+}
+.navbar{
+    background-color:#26272a;
+}
+.img-title{
+    color: white;
+    text-align: center;
+    /*font-size: 20px;*/
+    text-transform: uppercase;
+}
+img{
+    margin:0 auto;
+}
+
+.img-task{
+    margin:0 auto;
+    border: 10px solid white;
+}
+.done-button{
+    margin-top: 50px;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.options {
+    text-transform: uppercase;
+}
+
+.task-body > .row {
+    margin-top:1%;
+}
+.parent-view .task-body .answers {
+    margin-top: 10px;
+    text-align: center;
+}
+.parent-view .task-body .answers .c1 {
+    background-color: #9cdc1f;
+    border-color: #9cdc1f;
+}
+.parent-view .task-body .answers .c2 {
+    background-color: #FFF200;
+    border-color: #FFF200;
+}
+.parent-view .task-body .answers .c3 {
+    background-color: #F7941D;
+    border-color: #F7941D;
+}
+.parent-view .task-body .answers .c4 {
+    background-color: #DC1F3A;
+    border-color: #DC1F3A;
+}
+.parent-view .task-body .answers .c5 {
+    background-color: #0072BC;
+    border-color: #0072BC;
+}
+.parent-view .task-body .answers .c6 {
+    background-color: #8560A8;
+    border-color: #8560A8;
+}
+.parent-view .task-body .answers button {
+    width: 150px;
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+    margin: 5px 20px;
+}
+
+.contribution-details{
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+}
+
+.done-button{
+    background-color:#9cdc1f;
+}
+
+.done-button:hover{
+    background-color: #7F7F7F;
+    border: 5px #9cdc1f solid;
+}
+
+.options:hover {
+    background-color: #7F7F7F;
+    border: 5px #9cdc1f solid;
+}
+
+@media (max-width: 768px) {
+    .done-button{
+        background-color:#9cdc1f;
+        text-transform: uppercase;
+        margin-top:0;
+        top:0;
+        right:0;
+        left:0;
+        position: fixed;
+        margin-bottom: 200px;
+        height: 50px;
+        width: 100%;
+        font-weight: bolder;
+    }
+
+    .contribution-details{
+        margin-top: 50px;
+        position: relative;
+        text-align: center;
+    }
+}

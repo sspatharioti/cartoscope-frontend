@@ -1,0 +1,237 @@
+@color_1: white;
+@color_2: #000;
+@color_3: #fff;
+@color_4: #2e2e2e;
+@color_5: #9cdc1f;
+@font-family_1: 'montserrat', sans-serif;
+
+* {
+  font-family: @font-family_1 !important;
+}
+
+html {
+  height: 100%;
+  body {
+    min-height: 100%;
+    height: 100%;
+  }
+  .h-100 {
+    height: 100%;
+  }
+  button {
+    font-weight: 600;
+  }
+  .side-1 {
+    background-color: #26272a;
+    height: 100%;
+    overflow: auto;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+
+    .w-90 {
+      width: 90%;
+    }
+
+    .inp {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: none;
+      outline: none;
+      color: @color_4;
+      size: 14px;
+      padding: 4px 4px;
+      width: 100%;
+    }
+
+    .login-content {
+      position: relative;
+      color: @color_1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .login-buttons-wrapper {
+        align-self: flex-start;
+        .login-top-panel {
+          background-color: @color_5;
+          color: @color_4;
+          padding: 20px;
+
+          .log-tit {
+            font-size: 22px;
+            line-height: 25px;
+            display: block;
+
+          }
+          .log-msg {
+            font-size: 8px;
+            line-height: 1.2;
+            margin-right: 15px;
+          }
+          .rem-row {
+            display: flex;
+            align-items: flex-end;
+            .rem-me {
+              font-size: 8px;
+              font-weight: 500;
+            }
+            span {
+              flex: 1;
+            }
+            .fgt-pass {
+              font-size: 8px;
+              cursor: pointer;
+              font-weight: 500;
+            }
+          }
+
+          .login-btn {
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: @color_2;
+            color: @color_5;
+            font-size: 12px;
+            outline: none;
+            border: none;
+            padding: 5px 20px;
+          }
+
+        }
+      }
+    }
+    .reg-msg {
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      margin-left: -15px;
+    }
+    .register-btn {
+      border-radius: 8px;
+      background-color: #9cdc1f;
+      color: @color_2;
+      font-size: 18px;
+      outline: none;
+      border: none;
+      padding: 7px 30px;
+    }
+    .reg-btn-holder {
+      text-align: center;
+      margin-left: -15px;
+    }
+
+    .links-wrapper {
+      align-self: flex-end;
+      width: 100%;
+      margin-top: 50px;
+      padding-left: 15px;
+      .link-ul {
+        list-style: none;
+        font-size: 10px;
+        padding: 0;
+      }
+    }
+  }
+  .center-1 {
+    height: 100%;
+    background-color: #9cdc1f;
+    background-image: url('../images/Layer13.png');
+    background-size: 100% 100%;
+    overflow: auto;
+
+    .content-links-wrapper {
+      color: @color_1;
+      text-align: right;
+      margin-top: 20px;
+      font-size: 12px;
+      padding-right: 40px;
+
+      .circ-sep {
+        height: 5px;
+        width: 5px;
+        border-radius: 5px;
+        background-color: #9cdc1f;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+    .center-content {
+      position: relative;
+      top: 25%;
+      text-align: center;
+      .welcomemessage {
+        color: @color_1;
+      }
+      .welcometext {
+        color: @color_1;
+        font-size: 16px;
+      }
+      .contrib-btn {
+        margin-top: 20px;
+        border-radius: 8px;
+        background-color: #9cdc1f;
+        color: @color_2;
+        font-size: 18px;
+        text-align: center;
+        outline: none;
+        border: none;
+        padding: 10px 25px;
+      }
+    }
+  }
+
+  .register-modal-body {
+    background-color: #9cdc1f;
+    padding: 15px;
+  }
+  .reg-lbl {
+    display: block;
+    width: 100%;
+  }
+  .reg-inp {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: @color_4;
+    size: 14px;
+    padding: 4px 6px;
+  }
+  .modal-register-button {
+    background: black;
+    color: @color_1;
+    border-radius: 10px;
+    padding: 7px 50px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+  }
+  .modal-kill-btn {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 2px;
+    button {
+      padding: 2px 5px;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .col-sm-2-5 {
+      width: 20%;
+      float: left;
+    }
+
+    .col-sm-7-5 {
+      width: 80%;
+      float: left;
+    }
+  }
+}

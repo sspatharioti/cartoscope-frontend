@@ -1,0 +1,60 @@
+body {
+    background-image: url('../images/background_dktp.png');
+    font-family: 'PT Sans', sans-serif;
+    color: #f8f8ff;
+}
+.whymore-checkbox {
+    display:block;
+}
+.form-group > .describe{
+    text-align: left;
+}
+
+.questions{
+    text-transform: uppercase;
+    font-family: 'Paytone One', sans-serif;
+    color: black;
+}
+
+.title{
+    text-transform: capitalize;
+    font-family: 'Paytone One', sans-serif;
+    color: black;
+}
+
+.submit-survey{
+    width: 200px;
+}
+
+.submit-button {
+    background-color:#9cdc1f;
+    color:black;
+    font-family: 'Paytone One', sans-serif;
+    border: 5px #9cdc1f solid;
+
+}
+
+.more-text {
+    margin-top: 10px;
+}
+
+.submit-button:hover{
+    background-color: #7F7F7F;
+    border: 5px #9cdc1f solid;
+}
+@media (max-width: 768px) {
+    .submit-survey {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        height: 50px;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .thankyou-message{
+        margin-bottom: 70px;
+    }
+}

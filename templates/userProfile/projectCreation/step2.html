@@ -1,0 +1,57 @@
+<div class="step-2">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 q-box">
+
+            <svg class="img-placeholder" xmlns="http://www.w3.org/2000/svg">
+
+                <line x1="0" y1="0" y2="100%" x2="100%" stroke-width="4" stroke="#26272a"></line>
+                <line x1="0" y1="100%" x2="100%" y2="0" stroke-width="4" stroke="#26272a"></line>
+            </svg>
+
+            <div class="question-box">
+                <input ng-model="project.task.question" placeholder="Type your question here"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row question-box">
+        <div class="col-md-12">
+            <div>
+                <span class="option-add-btn" ng-click="addOption()">
+                    <span class="fa fa-plus"></span>
+                    <span>ADD ANSWER</span>
+                </span>
+            </div>
+        </div>
+        <br>
+        <div class="custom-answers">
+            <div class="options">
+                <div>
+                    <div>
+                        <div class="c" ng-repeat="choice in project.task.options" ng-animate="'animate'">
+                            <div class="left">
+                                <input placeholder="Option" ng-model="choice.text"
+                                       ng-class="{'c1':choice.color==1,'c2':choice.color==2,'c3':choice.color==3,'c4':choice.color==4,'c5':choice.color==5,'c6':choice.color==6}">
+                                <i class="fa fa-times-circle kill-btn" ng-click="removeOption($index)"></i>
+                                <span class="col-sel c1 selected" ng-click="choice.color=1"
+                                      ng-class="{'selected':choice.color==1}"></span>
+                                <span class="col-sel c2" ng-click="choice.color=2"
+                                      ng-class="{'selected':choice.color==2}"></span>
+                                <span class="col-sel c3" ng-click="choice.color=3"
+                                      ng-class="{'selected':choice.color==3}"></span>
+                                <span class="col-sel c4" ng-click="choice.color=4"
+                                      ng-class="{'selected':choice.color==4}"></span>
+                                <span class="col-sel c5" ng-click="choice.color=5"
+                                      ng-class="{'selected':choice.color==5}"></span>
+                                <span class="col-sel c6" ng-click="choice.color=6"
+                                      ng-class="{'selected':choice.color==6}"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
